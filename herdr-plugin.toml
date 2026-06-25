@@ -1,0 +1,19 @@
+id = "aiki"
+name = "aiki"
+version = "0.0.1"
+min_herdr_version = "0.7.0"
+platforms = ["macos", "linux"]
+description = "Surface aiki's active epics in a herdr pane; bootstraps aiki's neutral session-identity hook at install."
+
+# A terminal pane that renders aiki's in-flight epics.
+# herdr places panes as overlay|split|tab|zoomed; there is no native "left".
+# A left sidebar is achieved by opening the pane with `--direction right` (it
+# lands on the right) and then `herdr pane swap --direction left` (verified
+# 0.7.0: changed=true, pane moves to the x=0 column). NB a `--direction down`
+# split cannot swap-left (no left/right neighbor) — the sidebar needs a
+# right-split first.
+[[panes]]
+id = "epics"
+title = "Active epics"
+placement = "split"
+command = ["bash", "render-epics.sh"]
