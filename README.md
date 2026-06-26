@@ -6,7 +6,7 @@ things:
 
 1. **Bootstraps the aiki-side hook at install.** Its `[[build]]` step wires up
    aiki's session-identity plugin (`plugins/herdr/` in this monorepo, published
-   as `aiki-sh/herdr`).
+   as `aiki-sh/aiki-plugin-herdr`).
 2. **Surfaces aiki's active epics** in a herdr pane (`render-epics.sh`).
 
 This is the **storefront**, not the mechanism. A herdr plugin reacts to herdr's
@@ -45,4 +45,4 @@ framing. (Topic added at publish time, not while monorepo-staged.)
 ## Status
 
 Staged in the aiki monorepo under `integrations/herdr/`. To be published as the
-public repo `aiki-sh/in-herdr`, tagged with the `herdr-plugin` topic.
+public repo `aiki-sh/aiki-integration-herdr`, tagged with the `herdr-plugin` topic.
